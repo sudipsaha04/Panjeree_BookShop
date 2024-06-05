@@ -90,6 +90,7 @@
     <Content Include="Assets\Lib\js\bootstrap.js" />
     <Content Include="Assets\Lib\js\bootstrap.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Admin\Author.aspx" />
     <Content Include="Views\Admin\Books.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Web.config" />
@@ -105,6 +106,13 @@
     </Compile>
     <Compile Include="Views\Admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Author.aspx.cs">
+      <DependentUpon>Author.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Author.aspx.designer.cs">
+      <DependentUpon>Author.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Admin\Books.aspx.cs">
       <DependentUpon>Books.aspx</DependentUpon>
