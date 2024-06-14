@@ -92,6 +92,8 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Admin\Author.aspx" />
     <Content Include="Views\Admin\Books.aspx" />
+    <Content Include="Views\Admin\Catagories.aspx" />
+    <Content Include="Views\Admin\Seller.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -120,6 +122,20 @@
     </Compile>
     <Compile Include="Views\Admin\Books.aspx.designer.cs">
       <DependentUpon>Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Catagories.aspx.cs">
+      <DependentUpon>Catagories.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Catagories.aspx.designer.cs">
+      <DependentUpon>Catagories.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Admin\Seller.aspx.cs">
+      <DependentUpon>Seller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Admin\Seller.aspx.designer.cs">
+      <DependentUpon>Seller.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
