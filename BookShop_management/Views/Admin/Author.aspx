@@ -23,10 +23,10 @@
                 <label for="" class="form-label text-success">Country</label>
    
                 <asp:DropDownList ID="DropDownList1" runat="server" class="form-control">
-                    <asp:ListItem>USA</asp:ListItem>
+                    <asp:ListItem>Bangladesh</asp:ListItem>
                     <asp:ListItem>India</asp:ListItem>
                     <asp:ListItem>France</asp:ListItem>
-                    <asp:ListItem>Bangladesh</asp:ListItem>
+                    <asp:ListItem>USA</asp:ListItem>
                     <asp:ListItem>UK</asp:ListItem>
                     <asp:ListItem>Spain</asp:ListItem>
                 </asp:DropDownList>
