@@ -29,31 +29,25 @@
                 <div class="p-2">
                     <div class="mb-3">
                         <img src="" />
-                        <a href="#">
+                        <a href="Books.aspx">
                             <label>Books</label>
                         </a>
                     </div>
                     <div class="mb-3">
                         <img src="" />
-                        <a href="#">
-                            <label>Books</label>
-                        </a>
-                    </div>
-                    <div class="mb-3">
-                        <img src="" />
-                        <a href="#">
+                        <a href="Authors.aspx">
                             <label>Authors</label>
                         </a>
                     </div>
                     <div class="mb-3">
                         <img src="" />
-                        <a href="#">
+                        <a href="Seller.aspx">
                             <label>Seller</label>
                         </a>
                     </div>
                     <div class="mb-3">
                         <img src="" />
-                        <a href="#">
+                        <a href="Catagories.aspx">
                             <label>Categories</label>
                         </a>
                     </div>
