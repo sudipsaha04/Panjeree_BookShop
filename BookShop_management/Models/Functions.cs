@@ -16,7 +16,7 @@ namespace BookShop_management.Models
         private string ConStr;
         public Functions() 
         {
-            ConStr = @"Data Source=SUDIP\\SQLEXPRESS;Initial Catalog=BookShopASPDB;Integrated Security=True;Trust Server Certificate=True";
+            ConStr = @"Data Source=SUDIP\SQLEXPRESS;AttachDbFilename=""C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\BookShopASPDB.mdf"";Integrated Security=True";
             Con = new SqlConnection(ConStr);
             cmd = new SqlCommand();
             cmd.Connection = Con;

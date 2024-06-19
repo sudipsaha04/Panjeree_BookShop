@@ -26,7 +26,7 @@ namespace BookShop_management.Views.Admin
         {
             try
             {
-                if (ANameTb.Value == "" || DescriptionTb.Value=="")
+                if (CatNameTb.Value == "" || DescriptionTb.Value=="")
                 {
                     ErrMsg.Text = "Missing Data!!!";
                 }
@@ -71,7 +71,7 @@ namespace BookShop_management.Views.Admin
         {
             try
             {
-                if (ANameTb.Value == "" || DescriptionTb.Value == "")
+                if (CatNameTb.Value == "" || DescriptionTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!!";
                 }
@@ -80,7 +80,7 @@ namespace BookShop_management.Views.Admin
                     string CName = CatNameTb.Value;
                     string CDesc = DescriptionTb.Value;
 
-                    string Query = "update CategoryTbl values CatNmae='{0}',CatDescription='{1}' where CatId = {2}";
+                    string Query = "update CategoryTbl set CatName='{0}',CatDescription='{1}' where CatId = {2}";
                     Query = string.Format(Query, CName, CDesc, CategoriesList.SelectedRow.Cells[1].Text);
                     Con.SetData(Query);
                     ShowCategories();
@@ -101,7 +101,7 @@ namespace BookShop_management.Views.Admin
         {
             try
             {
-                if (ANameTb.Value == "" || DescriptionTb.Value == "")
+                if (CatNameTb.Value == "" || DescriptionTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!!";
                 }
