@@ -53,7 +53,7 @@
                     </div>
                     <div class="mb-3">
                         <img src="" />
-                        <a href="#">
+                        <a href="../Login.aspx">
                             <label>Logout</label>
                         </a>
                     </div>
