@@ -1,26 +1,35 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Author.aspx.cs" Inherits="BookShop_management.Views.Admin.Author" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <style>
+        body {
+            background-image: url('../../Assets/Images/123.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-attachment: fixed;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
     <div class="container-fluid">
     <div class="row">
-        <div class="col"><h3 class="text-center">Manage Authors</h3></div>
+        <div class="col"><h3 class="text-center text-light">Manage Authors</h3></div>
     </div>
     <div class="row">
         <div class="col-md-4">
             <div class="mb-3">
-                <label for="" class="form-label text-success">Author Name</label>
+                <label for="" class="form-label text-light">Author Name</label>
                 <input type="text" placeholder="Title" autocomplete="off" class="form-control" runat="server" id="ANameTb"/>
             </div>
             <div class="mb-3">
-                <label for="" class="form-label text-success">Author Gender</label>
+                <label for="" class="form-label text-light">Author Gender</label>
                 <asp:DropDownList runat="server" class="form-control" id ="GenCb">
                     <asp:ListItem>Male</asp:ListItem>
                     <asp:ListItem>Female</asp:ListItem>
                 </asp:DropDownList>
              </div>
             <div class="mb-3">
-                <label for="" class="form-label text-success">Country</label>
+                <label for="" class="form-label text-light">Country</label>
    
                 <asp:DropDownList ID="CountryCb" runat="server" class="form-control">
                     <asp:ListItem>Bangladesh</asp:ListItem>
@@ -45,7 +54,7 @@
                 <AlternatingRowStyle BackColor="White" />
                 <EditRowStyle BackColor="#7C6F57" />
                 <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="teal" Font-Bold="False" ForeColor="White" />
+                <HeaderStyle BackColor="#000000" Font-Bold="False" ForeColor="White" />
                 <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
                 <RowStyle BackColor="#E3EAEB" />
                 <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />

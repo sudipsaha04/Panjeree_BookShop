@@ -6,6 +6,15 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" href="../Assets/Lib/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-image: url('../../Assets/Images/backs.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -22,23 +31,30 @@
                              <div class="row">
                                  <div class="col-md-4"></div>
                                  <div class="col-md-8">
-                                     <img src="" />
+                                     <img src="../../Assets/Images/logo.png" />
+                                     
                              </div>
+                                 <div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-8">
+       
+        <h3 class="text-light">Log-in</h3>
+</div>
                             
                          </div>
     <div class="mt-3">
-        <label for="" class="form-label">User Name</label>
+        <label for="" class="form-label text-light">User Name</label>
         <input type="email" placeholder="Your Email Here" autocomplete="off" runat="server" class="form-control" id="unameTb"/>
 
     </div>
                 <div class="mt-3">
-    <label for=""class="form-label">Password</label>
+    <label for=""class="form-label text-light">Password</label>
     <input type="password" placeholder="Password" autocomplete="off" runat="server" class="form-control" id="PasswordTb"/>
 
      </div>
                  <div class="mt-3 d-grid">
                       <asp:Label runat="server" ID="ErrMsg" class="text-danger text-center"></asp:Label>
-    <asp:Button Text="Login" runat="server" class=  "btn-success" ID="LoginBtn" OnClick="LoginBtn_Click" />
+    <asp:Button Text="Login" runat="server" class=  "btn-secondary" ID="LoginBtn" OnClick="LoginBtn_Click" />
 
      </div>
      </form>

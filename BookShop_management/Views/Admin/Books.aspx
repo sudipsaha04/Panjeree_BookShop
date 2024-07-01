@@ -1,32 +1,41 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Books.aspx.cs" Inherits="BookShop_management.Views.Admin.Books" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+      <style>
+        body {
+            background-image: url('../../Assets/Images/123.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: right;
+            background-attachment: fixed;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
     <div class="container-fluid">
         <div class="row">
-            <div class="col"><h3 class="text-center">Manage Books</h3></div>
+            <div class="col"><h3 class="text-center text-light">Manage Books</h3></div>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Books Title</label>
+                    <label for="" class="form-label text-light">Books Title</label>
                     <input type="text" placeholder="Title" id ="BNameTb" runat="server" autocomplete="off"  class="form-control"/>
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Books Author</label>
+                    <label for="" class="form-label text-light">Books Author</label>
                     <asp:DropDownList ID="BAuthCb" runat="server" class="form-control"></asp:DropDownList>
                  </div>
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Categories</label>
+                    <label for="" class="form-label text-light">Categories</label>
    
                     <asp:DropDownList ID="BCatCb" runat="server" class="form-control"></asp:DropDownList>
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Price</label>
+                    <label for="" class="form-label text-light">Price</label>
                     <input type="text" placeholder="Price" id="PriceTb" runat="server" autocomplete="off" class="form-control" />
                 </div>
                 <div class="mb-3">
-                    <label for="" class="form-label text-success">Quantity</label>
+                    <label for="" class="form-label text-light">Quantity</label>
                     <input type="text" placeholder="Quantity" id="QtyTb" runat="server" autocomplete="off" class="form-control" />
                 </div>
                <div class="row">
@@ -42,7 +51,7 @@
                  <AlternatingRowStyle BackColor="White" />
                  <EditRowStyle BackColor="#7C6F57" />
                  <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                 <HeaderStyle BackColor="teal" Font-Bold="False" ForeColor="White" />
+                 <HeaderStyle BackColor="#000000" Font-Bold="False" ForeColor="White" />
                  <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
                  <RowStyle BackColor="#E3EAEB" />
                  <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />

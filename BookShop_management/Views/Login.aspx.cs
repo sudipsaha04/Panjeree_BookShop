@@ -26,9 +26,9 @@ namespace BookShop_management.Views
             if (unameTb.Value == "" || PasswordTb.Value == "")
             {
                 ErrMsg.Text = "Missing Data!!!";
-            }else if(unameTb.Value == "Admin@gmail.com" && PasswordTb.Value == "Password")
+            }else if(unameTb.Value == "admin@gmail.com" && PasswordTb.Value == "Password")
             {
-                Response.Redirect("Admin/Book.aspx");
+                Response.Redirect("Admin/Books.aspx");
             }
             else
             {
