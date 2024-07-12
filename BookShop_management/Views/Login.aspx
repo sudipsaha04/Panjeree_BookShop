@@ -53,7 +53,7 @@
 
      </div>
                  <div class="mt-3 d-grid">
-                      <asp:Label runat="server" ID="ErrMsg" class="text-danger text-center"></asp:Label>
+                      <asp:Label runat="server" ID="ErrMsg" class="text-danger text-center"></asp:Label><br />
     <asp:Button Text="Login" runat="server" class=  "btn-secondary" ID="LoginBtn" OnClick="LoginBtn_Click" />
 
      </div>
