@@ -104,6 +104,7 @@
     <Content Include="Views\Admin\Catagories.aspx" />
     <Content Include="Views\Admin\Seller.aspx" />
     <Content Include="Views\Login.aspx" />
+    <Content Include="Views\Seller\Author.aspx" />
     <Content Include="Views\Seller\Selling.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -154,6 +155,13 @@
     </Compile>
     <Compile Include="Views\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Seller\Author.aspx.cs">
+      <DependentUpon>Author.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Seller\Author.aspx.designer.cs">
+      <DependentUpon>Author.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Seller\SellerMaster.Master.cs">
       <DependentUpon>SellerMaster.Master</DependentUpon>
