@@ -34,7 +34,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label text-light">Seller Address</label>
-                    <input type="text" placeholder="Password" autocomplete="off" runat="server" id="AddressTb" class="form-control" />
+                    <input type="text" placeholder="Address" autocomplete="off" runat="server" id="AddressTb" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label text-light">Seller Password</label>
+                    <input type="password" placeholder="Password" autocomplete="off" runat="server" id="PassTb" class="form-control" />
                 </div>
 
 

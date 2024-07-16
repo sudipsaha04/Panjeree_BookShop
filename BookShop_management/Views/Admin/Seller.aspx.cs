@@ -28,7 +28,7 @@ namespace BookShop_management.Views.Admin
         {
             try
             {
-                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "")
+                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "" || PassTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!!";
                 }
@@ -38,9 +38,10 @@ namespace BookShop_management.Views.Admin
                     string SEmail = EmailTb.Value;
                     string SPhone = PhoneTb.Value;
                     string SAdd = AddressTb.Value;
+                    string SPass  = PassTb.Value;
 
-                    string Query = "insert into SellerTbl values('{0}','{1}','{2}','{3}')";
-                    Query = string.Format(Query, SName,SEmail,SPhone,SAdd);
+                    string Query = "insert into SellerTbl values('{0}','{1}','{2}','{3}','{4}')";
+                    Query = string.Format(Query, SName,SEmail,SPhone,SAdd,SPass);
                     Con.SetData(Query);
                     ShowSellers();
                     ErrMsg.Text = "Seller Inserted!!!";
@@ -48,6 +49,7 @@ namespace BookShop_management.Views.Admin
                     EmailTb.Value = "";
                     PhoneTb.Value = "";
                     AddressTb.Value = "";
+                    PassTb.Value = "";
 
                 }
             }
@@ -65,6 +67,7 @@ namespace BookShop_management.Views.Admin
             EmailTb.Value = SellerList.SelectedRow.Cells[3].Text;
             PhoneTb.Value = SellerList.SelectedRow.Cells[4].Text;
             AddressTb.Value = SellerList.SelectedRow.Cells[5].Text;
+            PassTb.Value = SellerList.SelectedRow.Cells[6].Text;
 
             if (SNameTb.Value == "")
             {
@@ -80,7 +83,7 @@ namespace BookShop_management.Views.Admin
         {
             try
             {
-                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "")
+                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "" || PassTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!!";
                 }
@@ -90,9 +93,10 @@ namespace BookShop_management.Views.Admin
                     string SEmail = EmailTb.Value;
                     string SPhone = PhoneTb.Value;
                     string SAdd = AddressTb.Value;
+                    string SPass = PassTb.Value;
 
-                    string Query = "update SellerTbl set  SelName = '{0}', SelEmail= '{1}',SelPhone='{2}',SelAddress= '{3}' where SelId={4}";
-                    Query = string.Format(Query, SName, SEmail, SPhone, SAdd, SellerList.SelectedRow.Cells[1].Text);
+                    string Query = "update SellerTbl set  SelName = '{0}', SelEmail= '{1}',SelPhone='{2}',SelAddress= '{3}',SelPass= '{4}' where SelId={5}";
+                    Query = string.Format(Query, SName, SEmail, SPhone, SAdd,SPass, SellerList.SelectedRow.Cells[1].Text);
                     Con.SetData(Query);
                     ShowSellers();
                     ErrMsg.Text = "Seller Updated!!!";
@@ -100,6 +104,7 @@ namespace BookShop_management.Views.Admin
                     EmailTb.Value = "";
                     PhoneTb.Value = "";
                     AddressTb.Value = "";
+                    PassTb.Value = "";
 
                 }
             }
@@ -114,7 +119,7 @@ namespace BookShop_management.Views.Admin
         {
             try
             {
-                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "")
+                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "" || PassTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!!";
                 }
@@ -124,6 +129,7 @@ namespace BookShop_management.Views.Admin
                     string SEmail = EmailTb.Value;
                     string SPhone = PhoneTb.Value;
                     string SAdd = AddressTb.Value;
+                    string SPass = PassTb.Value;
 
                     string Query = "delete from SellerTbl where SelId={0}";
                     Query = string.Format(Query, SellerList.SelectedRow.Cells[1].Text);
@@ -134,6 +140,7 @@ namespace BookShop_management.Views.Admin
                     EmailTb.Value = "";
                     PhoneTb.Value = "";
                     AddressTb.Value = "";
+                    PassTb.Value = "";
 
                 }
             }

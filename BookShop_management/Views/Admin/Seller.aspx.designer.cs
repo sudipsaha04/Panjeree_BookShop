@@ -51,6 +51,15 @@ namespace BookShop_management.Views.Admin
         protected global::System.Web.UI.HtmlControls.HtmlInputText AddressTb;
 
         /// <summary>
+        /// PassTb control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword PassTb;
+
+        /// <summary>
         /// ErrMsg control.
         /// </summary>
         /// <remarks>
