@@ -79,6 +79,14 @@ namespace BookShop_management.Views.Seller
             ShowBooks();
         }
 
+        private void InsertBill()
+        {
+            string Query = "insert into BillTbl values('{0}',{1},{2})";
+            Query = string.Format(Query, System.DateTime.Today.Date.ToString(), Seller, Amount, Convert.ToInt32(GrdTotalTb.Text.SubString(2)));
+            Con.SetData(Query);
+
+        }
+
         int Grdtotal = 0;
         int Amount;
         protected void AddToBillBtn_Click(object sender, EventArgs e)
@@ -115,6 +123,11 @@ namespace BookShop_management.Views.Seller
 
             }
             
+        }
+
+        protected void PrintBtn_Click(object sender, EventArgs e)
+        {
+            InsertBill();
         }
     }
 }

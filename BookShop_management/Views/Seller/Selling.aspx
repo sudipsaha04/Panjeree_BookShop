@@ -1,8 +1,23 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Seller/SellerMaster.Master" AutoEventWireup="true" CodeBehind="Selling.aspx.cs" Inherits="BookShop_management.Views.Seller.Selling" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type ="text/javascript">
+        function PrintBill() {
+            var PGrid = document.getElementById('<%=BillList.ClientId%>');
+            PGrid.bordr = 0;
+            var PWin = window.open('', 'PrintGrid', 'left =100,top =100,width =1024,height = 768,tollbar =0,scrollbars =1,status = 0,resizable = 1');
+            PWin.document.write(PGrid.outerHTML);
+            PWin.document.close();
+            PWin.focus();
+            PWin.print();
+            PWin.close();
+
+        }
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
+    
     <div class="container-fluid">
         <div class="row">
         </div>
@@ -39,7 +54,7 @@
                             <div class="col">
                                 <div class="mt-3">
                                     <label for="" class="form-label text-success">Billing Date</label>
-                                    <input type="date" runat="server" class="form-control" id="DateTb" />
+                                    <input type="datetime" runat="server" class="form-control" id="DateTb" />
 
                                 </div>
                             </div>
@@ -76,7 +91,7 @@
   <AlternatingRowStyle BackColor="White" />
   <EditRowStyle BackColor="#7C6F57" />
   <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-  <HeaderStyle BackColor="#000000" Font-Bold="False" ForeColor="White" />
+  <HeaderStyle BackColor="SlateBlue" Font-Bold="False" ForeColor="White" />
   <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
   <RowStyle BackColor="#E3EAEB" />
   <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
@@ -87,7 +102,7 @@
 </asp:GridView>
                    <div class=" d-grid"> 
                         <asp:Label runat="server" ID="GrdTotalTb" class="text-danger text-center"></asp:Label><br />
-                       <asp:Button Text="Print" runat="server" ID="PrintBtn" class=  "btn-warning btn-block btn"  /></div>
+                       <asp:Button Text="Print" runat="server" ID="PrintBtn" OnClientClick="PrintBill()" class=  "btn-warning btn-block btn" OnClick="PrintBtn_Click"  /></div>
                    
                    </div>
                     </div>
