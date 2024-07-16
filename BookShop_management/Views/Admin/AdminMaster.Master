@@ -10,15 +10,17 @@
         }
 
         #left {
-            color: white;
+            color: black;
             height: 695px;
-            background-color: peru;
-            width: 200px;
+            background-color:burlywood;
+            width: 250px;
         }
 
         label {
-            color: navajowhite;
+            color: black;
             font-size : large;
+            font-family :Arial;
+            font-weight :bold;
         }
     </style>
     <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />

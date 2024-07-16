@@ -68,10 +68,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Images\123.jpg" />
+    <Content Include="Assets\Images\1last.jpg" />
     <Content Include="Assets\Images\2 %282%29.png" />
+    <Content Include="Assets\Images\2last.jpg" />
     <Content Include="Assets\Images\autho %282%29.png" />
     <Content Include="Assets\Images\backs.jpg" />
+    <Content Include="Assets\Images\bill.png" />
     <Content Include="Assets\Images\cate.png" />
+    <Content Include="Assets\Images\last.jpg" />
+    <Content Include="Assets\Images\lib.jpg" />
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\logout.png" />
     <Content Include="Assets\Images\sell %282%29.png" />
@@ -105,6 +110,7 @@
     <Content Include="Views\Admin\Seller.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Seller\Author.aspx" />
+    <Content Include="Views\Seller\Books.aspx" />
     <Content Include="Views\Seller\Categories.aspx" />
     <Content Include="Views\Seller\Selling.aspx" />
     <Content Include="Web.config" />
@@ -163,6 +169,13 @@
     </Compile>
     <Compile Include="Views\Seller\Author.aspx.designer.cs">
       <DependentUpon>Author.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Seller\Books.aspx.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Seller\Books.aspx.designer.cs">
+      <DependentUpon>Books.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Seller\Categories.aspx.cs">
       <DependentUpon>Categories.aspx</DependentUpon>

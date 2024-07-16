@@ -82,7 +82,7 @@ namespace BookShop_management.Views.Seller
         private void InsertBill()
         {
             string Query = "insert into BillTbl values('{0}',{1},{2})";
-            Query = string.Format(Query, System.DateTime.Today.Date.ToString(), Seller, Amount, Convert.ToInt32(GrdTotalTb.Text.SubString(2)));
+            Query = string.Format(Query, System.DateTime.Today.Date.ToString(), Seller, Amount, Convert.ToInt32(GrdTotalTb.Text.Substring(2)));
             Con.SetData(Query);
 
         }

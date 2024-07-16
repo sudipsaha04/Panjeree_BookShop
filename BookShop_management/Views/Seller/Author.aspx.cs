@@ -31,20 +31,14 @@ namespace BookShop_management.Views.Seller
             BooksList.DataBind();
         }
 
+        int Key = 0;
         protected void AuthorsList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ANameTb.Value = AuthorsList.SelectedRow.Cells[2].Text;
-            GenCb.SelectedItem.Value = AuthorsList.SelectedRow.Cells[3].Text;
-            CountryCb.SelectedItem.Value = AuthorsList.SelectedRow.Cells[4].Text;
-            if (ANameTb.Value == "")
-            {
-                Key = 0;
-            }
-            else
-            {
+            
+           
                 Key = Convert.ToInt32(AuthorsList.SelectedRow.Cells[1].Text);
-                ShowBooksByAuthor(Key);  // Show books by selected author
-            }
+                ShowBooksByAuthor(Key);  
+            
         }
     }
 }

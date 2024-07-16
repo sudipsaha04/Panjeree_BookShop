@@ -9,6 +9,35 @@
         background-position: right;
         background-attachment: fixed;
     }
+    .custom-input {
+    background-color: bisque;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+    .custom-input:focus {
+        outline: solid;
+        border-color: black;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    .custom-input::placeholder {
+        color: black;
+        opacity: 1;
+    }
+
+.btn-brown {
+    background-color: coral;
+    color: white;
+}
+
+.text-color {
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
 </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
@@ -22,30 +51,30 @@
             <div class="col-md-4">
                 <div class="mb-3">
                     <label for="" class="form-label text-light">Seller Name</label>
-                    <input type="text" placeholder="Name" autocomplete="off" runat="server" id="SNameTb" class="form-control" />
+                    <input type="text" placeholder="Name" autocomplete="off" runat="server" id="SNameTb" class="form-control custom-input" />
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label text-light">Seller Email</label>
-                    <input type="email" placeholder="Seller's Email" autocomplete="off" runat="server" id="EmailTb" class="form-control" />
+                    <input type="email" placeholder="Seller's Email" autocomplete="off" runat="server" id="EmailTb" class="form-control custom-input" />
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label text-light">Seller Phone</label>
-                    <input type="text" placeholder="Phone Number" autocomplete="off" runat="server" id="PhoneTb" class="form-control" />
+                    <input type="text" placeholder="Phone Number" autocomplete="off" runat="server" id="PhoneTb" class="form-control custom-input" />
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label text-light">Seller Address</label>
-                    <input type="text" placeholder="Address" autocomplete="off" runat="server" id="AddressTb" class="form-control" />
+                    <input type="text" placeholder="Address" autocomplete="off" runat="server" id="AddressTb" class="form-control custom-input" />
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label text-light">Seller Password</label>
-                    <input type="password" placeholder="Password" autocomplete="off" runat="server" id="PassTb" class="form-control" />
+                    <input type="password" placeholder="Password" autocomplete="off" runat="server" id="PassTb" class="form-control custom-input" />
                 </div>
 
 
                 <div class="row">
-                    <asp:Label runat="server" ID="ErrMsg" class="text-danger text-center"></asp:Label>
+                    <asp:Label runat="server" ID="ErrMsg" class="text-color text-center"></asp:Label>
                     <div class="col d-grid">
-                        <asp:Button Text="Update" runat="server" ID="EditBtn" class="btn-warning btn-block btn" OnClick="EditBtn_Click" /></div>
+                        <asp:Button Text="Update" runat="server" ID="EditBtn" class="btn-brown btn-block btn" OnClick="EditBtn_Click" /></div>
                     <div class="col d-grid">
                         <asp:Button Text="Save" runat="server" ID="SaveBtn" class="btn-success btn-block btn " OnClick="SaveBtn_Click" /></div>
                     <div class="col d-grid">
@@ -54,18 +83,16 @@
             </div>
 
             <div class="col-md-8">
-                <asp:GridView ID="SellerList" runat="server" class="table" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorsList_SelectedIndexChanged">
-                    <AlternatingRowStyle BackColor="White" />
-                    <EditRowStyle BackColor="#7C6F57" />
-                    <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#000000" Font-Bold="False" ForeColor="White" />
-                    <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#E3EAEB" />
-                    <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                    <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                    <SortedAscendingHeaderStyle BackColor="#246B61" />
-                    <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                    <SortedDescendingHeaderStyle BackColor="#15524A" />
+                <asp:GridView ID="SellerList" runat="server" class="table" CellPadding="3" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorsList_SelectedIndexChanged" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellSpacing="2">
+                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                    <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
             </div>
         </div>

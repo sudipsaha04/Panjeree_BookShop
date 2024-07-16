@@ -6,18 +6,24 @@
 <head runat="server">
     <title></title>
     <style>
-        *{
-            font-family:Poppins;
-        }
-        #left{
-            color:white;
-            height:695px;
-            background-color:aquamarine;
-        }
-        label{
-            color:black;
-        }
-    </style>
+    * {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #left {
+        color: black;
+        height: 695px;
+        background-color:burlywood;
+        width: 250px;
+    }
+
+    label {
+        color: black;
+        font-size : large;
+        font-family :Arial;
+        font-weight :bold;
+    }
+</style>
     <link href="../../Assets/Lib/css/bootstrap.min.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -26,34 +32,36 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-2" id="left">
-                <div style="height:120px"></div>
+                <div style="height:120px">
+                <img src="../../Assets/Images/shop (2).png" /></div>
                 <div class="p-2">
                     <div class="mb-3">
-                        <img src="" />
-                        <a href="#">
+                        <img src="../../Assets/Images/bill.png" />
+                        <a href="Selling.aspx">
                             <label>Billing</label>
                         </a>
                     </div>
                     <div class="mb-3">
-                        <img src="" />
-                        <a href="#">
+                        <img src="../../Assets/Images/autho (2).png" />
+                        <a href="Author.aspx">
                             <label>Authors</label>
                         </a>
                     </div>
                     <div class="mb-3">
-                        <img src="" />
-                        <a href="#">
-                            <label>Seller</label>
+                        <img src="../../Assets/Images/2 (2).png" />
+                        <a href="Books.aspx">
+                            <label>Books</label>
                         </a>
                     </div>
                     <div class="mb-3">
-                        <img src="" />
-                        <a href="#">
+                        <img src="../../Assets/Images/cate.png" />
+                        <a href="Categories.aspx">
                             <label>Categories</label>
                         </a>
                     </div>
+                     <div style="height: 200px"></div>
                     <div class="mb-3">
-                        <img src="" />
+                        <img src="../../Assets/Images/logout.png" />
                         <a href="../Login.aspx">
                             <label>Logout</label>
                         </a>
