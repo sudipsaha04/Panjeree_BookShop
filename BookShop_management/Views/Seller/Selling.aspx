@@ -15,14 +15,14 @@
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success text-center">Book Name</label>
-                            <input type="text" placeholder="Your Email Here" autocomplete="off" runat="server" class="form-control" />
+                            <input type="text" placeholder="Book's Name" autocomplete="off" runat="server" class="form-control" id="BNameTb" />
 
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
                             <label for="" class="form-label text-success">Book Price</label>
-                            <input type="email" placeholder="Your Email Here" autocomplete="off" runat="server" class="form-control" id="Email1" />
+                            <input type="text" placeholder="Price" autocomplete="off" runat="server" class="form-control" id="BPriceTb" />
 
                         </div>
                     </div>
@@ -31,16 +31,21 @@
                         <div class="row">
                             <div class="col">
                                 <div class="mt-3">
-                                    <label for="" class="form-label text-success">Book Name</label>
-                                    <input type="text" placeholder="Your Email Here" autocomplete="off" runat="server" class="form-control" id="Text1" />
+                                    <label for="" class="form-label text-success">Quantity</label>
+                                    <input type="text" placeholder="Quantity" autocomplete="off" runat="server" class="form-control" id="BQtyTb" />
 
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="mt-3">
-                                    <label for="" class="form-label text-success">Book Price</label>
-                                    <input type="email" placeholder="Your Email Here" autocomplete="off" runat="server" class="form-control" id="Email2" />
+                                    <label for="" class="form-label text-success">Billing Date</label>
+                                    <input type="date" runat="server" class="form-control" id="DateTb" />
 
+                                </div>
+                            </div>
+                            <div class="row mt-3 mb-3">
+                                <div class="col d-grid">
+                                    <asp:Button Text="Add to Bill" runat="server" ID="AddToBillBtn" class=  "btn-warning btn-block btn" OnClick="AddToBillBtn_Click"  />
                                 </div>
                             </div>
                         </div>
@@ -80,7 +85,9 @@
   <SortedDescendingCellStyle BackColor="#D4DFE1" />
   <SortedDescendingHeaderStyle BackColor="#15524A" />
 </asp:GridView>
-                   <div class=" d-grid"> <asp:Button Text="Print" runat="server" ID="PrintBtn" class=  "btn-warning btn-block btn"  /></div>
+                   <div class=" d-grid"> 
+                        <asp:Label runat="server" ID="GrdTotalTb" class="text-danger text-center"></asp:Label><br />
+                       <asp:Button Text="Print" runat="server" ID="PrintBtn" class=  "btn-warning btn-block btn"  /></div>
                    
                    </div>
                     </div>

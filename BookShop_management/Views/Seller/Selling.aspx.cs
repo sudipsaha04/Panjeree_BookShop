@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace BookShop_management.Views.Seller
 {
     public partial class Selling : System.Web.UI.Page
     {
-        Models.Functions Con; 
+        Models.Functions Con;
+        int Seller = Login.User;
+        String SName = Login.UName;
         protected void Page_Load(object sender, EventArgs e)
         {
             Con = new Models.Functions();
@@ -41,14 +45,76 @@ namespace BookShop_management.Views.Seller
         }
         private void ShowBooks()
         {
-            string Query = "Select *from BookTbl";
+            string Query = "Select BId as Code,BName as Name,BQty as Stock,Bprice as Price from BookTbl";
             BooksList.DataSource = Con.GetData(Query);
             BooksList.DataBind();
         }
 
+        int Key = 0;
+        int Stock = 0;
         protected void AuthorsList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            BNameTb.Value = BooksList.SelectedRow.Cells[2].Text;
+            Stock= Convert.ToInt32(BooksList.SelectedRow.Cells[3].Text);
+            BPriceTb.Value = BooksList.SelectedRow.Cells[4].Text;
+            
+            if (BNameTb.Value == "")
+            {
+                Key = 0;
+            }
+            else
+            {
+                Key = Convert.ToInt32(BooksList.SelectedRow.Cells[1].Text);
+            }
+        }
 
+        private void UpdateStock()
+        {
+            int NewQty;
+            NewQty = Convert.ToInt32(BooksList.SelectedRow.Cells[3].Text) - Convert.ToInt32(BQtyTb.Value);
+
+            string Query = "Update BookTbl set BQty = {0} where BId={1}";
+            Query = string.Format(Query, NewQty,BooksList.SelectedRow.Cells[1].Text);
+            Con.SetData(Query);
+            ShowBooks();
+        }
+
+        int Grdtotal = 0;
+        int Amount;
+        protected void AddToBillBtn_Click(object sender, EventArgs e)
+        {
+            if (BNameTb.Value == "" || BPriceTb.Value == "" || BNameTb.Value == "")
+            {
+
+            }
+            else
+            {
+                int total = Convert.ToInt32(BQtyTb.Value) * Convert.ToInt32(BPriceTb.Value);
+                DataTable dt = (DataTable)ViewState["Bill"];
+                dt.Rows.Add(BillList.Rows.Count+1,
+                    BNameTb.Value.Trim(),
+                    BPriceTb.Value.Trim(),
+                    BQtyTb.Value.Trim(),
+                    total);
+
+                ViewState["Bill"] = dt;
+                this.BindGrid();
+                UpdateStock();
+
+                Grdtotal = 0;
+                for (int i = 0; i < BillList.Rows.Count - 1; i++)
+                {
+                    Grdtotal = Grdtotal + Convert.ToInt32(BillList.Rows[i].Cells[5].Text);
+                }
+                Amount = Grdtotal;
+                GrdTotalTb.Text = "Tk" + Grdtotal;
+                BNameTb.Value = "";
+                BPriceTb.Value = "";
+                BQtyTb.Value = "";
+                Grdtotal = 0;
+
+            }
+            
         }
     }
 }
