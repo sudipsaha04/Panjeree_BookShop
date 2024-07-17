@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookShop_management.Views.Admin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,7 +25,13 @@ namespace BookShop_management.Views.Seller
         }
         private void ShowBooksByCategories(int categoryId)
         {
-            string Query = $"Select * from BookTbl where BCategory = {categoryId}";
+            string Query = $@"
+                SELECT B.BId, B.BName, A.AutName, C.CatName, B.BQty, B.BPrice
+                FROM BookTbl B
+                JOIN AuthorTbl A ON B.BAuthor = A.AutId
+                JOIN CategoryTbl C ON B.BCategory = C.CatId
+                WHERE B.BCategory = {categoryId}";
+           
             BooksList.DataSource = Con.GetData(Query);
             BooksList.DataBind();
         }

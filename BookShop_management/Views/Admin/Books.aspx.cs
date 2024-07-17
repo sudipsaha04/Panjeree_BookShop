@@ -25,7 +25,12 @@ namespace BookShop_management.Views.Admin
 
         private void ShowBooks()
         {
-            string Query = "Select *from BookTbl";
+            /*string Query = @"
+                SELECT B.BId, B.BName, A.AutName, C.CatName, B.BQty, B.BPrice
+                FROM BookTbl B
+                JOIN AuthorTbl A ON B.BAuthor = A.AutId
+                JOIN CategoryTbl C ON B.BCategory = C.CatId";*/
+            string Query = "select * from BookTbl";
             BooksList.DataSource = Con.GetData(Query);
             BooksList.DataBind();
         }

@@ -26,7 +26,12 @@ namespace BookShop_management.Views.Seller
 
         private void ShowBooksByAuthor(int authorId)
         {
-            string Query = $"Select * from BookTbl where BAuthor = {authorId}";
+            string Query = $@"
+                SELECT B.BId, B.BName, A.AutName, C.CatName, B.BQty, B.BPrice
+                FROM BookTbl B
+                JOIN AuthorTbl A ON B.BAuthor = A.AutId
+                JOIN CategoryTbl C ON B.BCategory = C.CatId
+                WHERE B.BAuthor = {authorId}";
             BooksList.DataSource = Con.GetData(Query);
             BooksList.DataBind();
         }

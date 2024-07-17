@@ -85,15 +85,16 @@
                                 <asp:Button Text="Login" runat="server" class="btn-brown" ID="LoginBtn" OnClick="LoginBtn_Click" />
 
                             </div>
+                            <div class="mt-3 ">
+                                <a href="Index.aspx" class="btn btn-brown  ">Go Back</a>
+                            </div>
+                        </div>
+                    </div>
                 </form>
-
-            </div>
-            <div class="col-md-4">
             </div>
 
         </div>
-
     </div>
-
 </body>
 </html>
+

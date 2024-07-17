@@ -70,17 +70,29 @@
     <Content Include="Assets\Images\123.jpg" />
     <Content Include="Assets\Images\1last.jpg" />
     <Content Include="Assets\Images\2 %282%29.png" />
+    <Content Include="Assets\Images\27362503.jpg" />
     <Content Include="Assets\Images\2last.jpg" />
+    <Content Include="Assets\Images\51d7yB5cETL.jpg" />
+    <Content Include="Assets\Images\59571699.jpg" />
+    <Content Include="Assets\Images\718Z4oInFOL._AC_UF1000,1000_QL80_.jpg" />
+    <Content Include="Assets\Images\7d2d31959734d5c88c349afb040f7311.jpg" />
+    <Content Include="Assets\Images\9781398518179.jpg" />
     <Content Include="Assets\Images\autho %282%29.png" />
+    <Content Include="Assets\Images\back3.jpg" />
     <Content Include="Assets\Images\backs.jpg" />
     <Content Include="Assets\Images\bill.png" />
+    <Content Include="Assets\Images\books.jpg" />
     <Content Include="Assets\Images\cate.png" />
+    <Content Include="Assets\Images\fa5d8b14ec3da43e0ed90df2fe79e867.jpg" />
     <Content Include="Assets\Images\last.jpg" />
     <Content Include="Assets\Images\lib.jpg" />
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\logout.png" />
+    <Content Include="Assets\Images\medium_f2478525b5efef784b36852102d30fa99776d0b9.jpg" />
+    <Content Include="Assets\Images\pro_pbid_4395915.jpg" />
     <Content Include="Assets\Images\sell %282%29.png" />
     <Content Include="Assets\Images\shop %282%29.png" />
+    <Content Include="Assets\Images\sub-buzz-5961-1639958921-3.jpg" />
     <Content Include="Assets\Lib\css\bootstrap-grid.css" />
     <Content Include="Assets\Lib\css\bootstrap-grid.min.css" />
     <Content Include="Assets\Lib\css\bootstrap-grid.rtl.css" />
@@ -108,6 +120,7 @@
     <Content Include="Views\Admin\Books.aspx" />
     <Content Include="Views\Admin\Catagories.aspx" />
     <Content Include="Views\Admin\Seller.aspx" />
+    <Content Include="Views\Index.aspx" />
     <Content Include="Views\Login.aspx" />
     <Content Include="Views\Seller\Author.aspx" />
     <Content Include="Views\Seller\Books.aspx" />
@@ -155,6 +168,13 @@
     </Compile>
     <Compile Include="Views\Admin\Seller.aspx.designer.cs">
       <DependentUpon>Seller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

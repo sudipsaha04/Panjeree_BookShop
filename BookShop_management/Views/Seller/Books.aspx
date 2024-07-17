@@ -8,13 +8,61 @@
             background-position: right;
             background-attachment: fixed;
         }
+                .custom-input {
+            background-color: bisque;
+            color: black;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+            .custom-input:focus {
+                outline: solid;
+                border-color: black;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+            .custom-input::placeholder {
+                color: black;
+                opacity: 1;
+            }
+
+        .btn-brown {
+            background-color: coral;
+            color: white;
+        }
+
+        .text-color {
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+        }
+
+        .header-background {
+            background-color: coral;
+            color: black;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
      <div class="container-fluid">
      <div class="row">
          <div class="col">
-             <h3 class="text-center text-light">Manage Books</h3>
+             <div class="header-container">
+    <h3 class="header-background">Manage Books</h3>
+</div>
+            
          </div>
      </div>
      <div class="row">

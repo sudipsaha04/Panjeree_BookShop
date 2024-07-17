@@ -23,6 +23,52 @@
             background-position: right;
             background-attachment: fixed;
         }
+
+        .custom-input {
+            background-color: bisque;
+            color: black;
+            border: 1px solid #ccc;
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+            .custom-input:focus {
+                outline: solid;
+                border-color: black;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+
+            .custom-input::placeholder {
+                color: black;
+                opacity: 1;
+            }
+
+        .btn-brown {
+            background-color: coral;
+            color: white;
+        }
+
+        .text-color {
+            color: white;
+            font-weight: bolder;
+            font-size: large;
+        }
+
+        .header-background {
+            background-color: coral;
+            color: black;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 30px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MyContent" runat="server">
@@ -33,20 +79,22 @@
 
         <div class="row">
             <div class="col-md-5">
-                <h3 class="text-center" style="color: teal;">Book Details</h3>
+                <div class="header-container">
+                    <h3 class="header-background">Book Details</h3>
+                </div>
 
                 <div class="row">
                     <div class="col">
                         <div class="mt-3">
-                            <label for="" class="form-label text-success text-center">Book Name</label>
-                            <input type="text" placeholder="Book's Name" autocomplete="off" runat="server" class="form-control" id="BNameTb" />
+                            <label for="" class="form-label text-light">Book Name</label>
+                            <input type="text" placeholder="Book's Name" autocomplete="off" runat="server" class="form-control custom-input" id="BNameTb" />
 
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
-                            <label for="" class="form-label text-success">Book Price</label>
-                            <input type="text" placeholder="Price" autocomplete="off" runat="server" class="form-control" id="BPriceTb" />
+                            <label for="" class="form-label text-light">Book Price</label>
+                            <input type="text" placeholder="Price" autocomplete="off" runat="server" class="form-control custom-input" id="BPriceTb" />
 
                         </div>
                     </div>
@@ -55,15 +103,15 @@
                 <div class="row">
                     <div class="col">
                         <div class="mt-3">
-                            <label for="" class="form-label text-success">Quantity</label>
-                            <input type="text" placeholder="Quantity" autocomplete="off" runat="server" class="form-control" id="BQtyTb" />
+                            <label for="" class="form-label text-light">Quantity</label>
+                            <input type="text" placeholder="Quantity" autocomplete="off" runat="server" class="form-control custom-input" id="BQtyTb" />
 
                         </div>
                     </div>
                     <div class="col">
                         <div class="mt-3">
-                            <label for="" class="form-label text-success">Billing Date</label>
-                            <input type="datetime" runat="server" class="form-control" id="DateTb" />
+                            <label for="" class="form-label text-light">Billing Date</label>
+                            <input type="datetime" runat="server" class="form-control custom-input" id="DateTb" />
 
                         </div>
                     </div>
@@ -74,43 +122,43 @@
                     </div>
                 </div>
                 <div class="row my-5">
-                    <h4 class="text-center" style="color: teal;">Book List</h4>
+                    <div class="header-container">
+                        <h3 class="header-background">Books List</h3>
+                    </div>
                     <div class="col">
-                        <asp:GridView ID="BooksList" runat="server" class="table" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorsList_SelectedIndexChanged">
-                            <AlternatingRowStyle BackColor="White" />
-                            <EditRowStyle BackColor="#7C6F57" />
-                            <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#000000" Font-Bold="False" ForeColor="White" />
-                            <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#E3EAEB" />
-                            <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                            <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                            <SortedAscendingHeaderStyle BackColor="#246B61" />
-                            <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                            <SortedDescendingHeaderStyle BackColor="#15524A" />
+                        <asp:GridView ID="BooksList" runat="server" class="table" CellPadding="2" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorsList_SelectedIndexChanged" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" ForeColor="Black" GridLines="None">
+                            <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                            <FooterStyle BackColor="Tan" />
+                            <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                            <PagerStyle ForeColor="DarkSlateBlue" HorizontalAlign="Center" BackColor="PaleGoldenrod" />
+                            <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                            <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                            <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                            <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                            <SortedDescendingHeaderStyle BackColor="#C2A47B" />
                         </asp:GridView>
                     </div>
 
                 </div>
             </div>
             <div class="col-md-7">
-                <h4 class="text-center" style="color: crimson;">Client's Bill</h4>
+                <div class="header-container">
+                    <h3 class="header-background">Client's Bill</h3>
+                </div>
                 <div class="col">
-                    <asp:GridView ID="BillList" runat="server" class="table" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorsList_SelectedIndexChanged">
-                        <AlternatingRowStyle BackColor="White" />
-                        <EditRowStyle BackColor="#7C6F57" />
-                        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-                        <HeaderStyle BackColor="SlateBlue" Font-Bold="False" ForeColor="White" />
-                        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#E3EAEB" />
-                        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-                        <SortedAscendingCellStyle BackColor="#F8FAFA" />
-                        <SortedAscendingHeaderStyle BackColor="#246B61" />
-                        <SortedDescendingCellStyle BackColor="#D4DFE1" />
-                        <SortedDescendingHeaderStyle BackColor="#15524A" />
+                    <asp:GridView ID="BillList" runat="server" class="table" CellPadding="2" ForeColor="Black" GridLines="None" AutoGenerateSelectButton="True" OnSelectedIndexChanged="AuthorsList_SelectedIndexChanged" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px">
+                        <AlternatingRowStyle BackColor="PaleGoldenrod" />
+                        <FooterStyle BackColor="Tan" />
+                        <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                        <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+                        <SelectedRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                        <SortedAscendingCellStyle BackColor="#FAFAE7" />
+                        <SortedAscendingHeaderStyle BackColor="#DAC09E" />
+                        <SortedDescendingCellStyle BackColor="#E1DB9C" />
+                        <SortedDescendingHeaderStyle BackColor="#C2A47B" />
                     </asp:GridView>
                     <div class=" d-grid">
-                        <asp:Label runat="server" ID="GrdTotalTb" class="text-danger text-center"></asp:Label><br />
+                        <asp:Label runat="server" ID="GrdTotalTb" class="text-color text-center"></asp:Label><br />
                         <asp:Button Text="Print" runat="server" ID="PrintBtn" OnClientClick="PrintBill()" class="btn-warning btn-block btn" OnClick="PrintBtn_Click" />
                     </div>
 
